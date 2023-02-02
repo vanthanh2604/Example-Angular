@@ -5,10 +5,10 @@ import { Product } from '../../interfaces/product';
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
-  styleUrls: ['./products.component.css']
+  styleUrls: ['./products.component.css'],
 })
 export class ProductsComponent implements OnInit {
-  productss: Product[];
+  products: Product[];
 
   constructor(private activatedRoute: ActivatedRoute) {}
 
@@ -19,7 +19,7 @@ export class ProductsComponent implements OnInit {
     );
     this.activatedRoute.data.subscribe((response: any) => {
       console.log('PRODUCT FETCHING', response);
-      this.productss = response.productsccccccc;
+      this.products = response.dataProduct;
       console.log('PRODUCT FETCHED');
     });
   }

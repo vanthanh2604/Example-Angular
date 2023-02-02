@@ -8,15 +8,15 @@ import { ProductsResolverService } from './services/productsResolver/products-re
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   {
-    path: 'productsccccccc',
+    path: 'products',
     component: ProductsComponent,
-    resolve: { productsccccccc: ProductsResolverService }
+    resolve: { dataProduct: ProductsResolverService },
   },
-  { path: 'about', component: AboutComponent }
+  { path: 'about', component: AboutComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class AppRoutingModule {}
