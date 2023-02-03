@@ -7,20 +7,18 @@ import { AboutComponent } from './components/about/about.component';
 import { ProductsComponent } from './components/products/products.component';
 import { HomeComponent } from './components/home/home.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ProgressBarComponent } from './components/progress-bar/progress-bar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AboutComponent,
     ProductsComponent,
-    HomeComponent
+    HomeComponent,
+    ProgressBarComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule 
-  ],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
