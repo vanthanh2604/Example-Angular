@@ -9,7 +9,7 @@ import { Component, OnInit, Input } from '@angular/core';
     >
       <div
         class="progress"
-        [style]="{
+        [ngStyle]="{
           backgroundColor: progressColor,
           width: progress + '%'
         }"
