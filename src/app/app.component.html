@@ -1,14 +1,26 @@
-<div class="card">
+<div class="card mx-4">
   <div class="card-header">
     You have selected
-    <span class="badge badge-primary">{{ counter }}</span> items.
+    <ng-container [ngTemplateOutlet]="counterTmpl"></ng-container>
   </div>
   <div class="card-body">
-    There are <span class="badge badge-primary">{{ counter }}</span> items was
+    There are
+    <ng-container [ngTemplateOutlet]="counterTmpl"></ng-container> items was
     selected.
   </div>
   <div class="card-footer">
     You have selected
-    <span class="badge badge-primary">{{ counter }}</span> items.
+    <ng-container [ngTemplateOutlet]="counterTmpl"></ng-container> items.
   </div>
 </div>
+<ng-template #counterTmpl>
+  <span class="badge badge-primary">{{ counter }}</span> items.
+</ng-template>
+
+<!-- cách 1 -->
+<!-- <ng-template #linkTemplate let-l="link"> {{ l }} </ng-template> -->
+
+<!-- cách  -->
+<ng-template #linkTemplate let-l> {{ l }} </ng-template>
+
+<tab [navs]="navs" [linkTemplate]="linkTemplate"></tab>
