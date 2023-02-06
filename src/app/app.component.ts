@@ -14,5 +14,6 @@ import {
 })
 export class AppComponent {
   counter = 1;
+  currentIndex = 0;
   navs = ['Active', 'Link 1', 'Link 2'];
 }

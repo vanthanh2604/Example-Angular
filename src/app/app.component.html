@@ -24,3 +24,19 @@
 <ng-template #linkTemplate let-l> {{ l }} </ng-template>
 
 <tab [navs]="navs" [linkTemplate]="linkTemplate"></tab>
+
+<tab-group [(activeIndex)]="currentIndex">
+  <tab-panel title="tab 1">tab 1</tab-panel>
+  <tab-panel title="tab 2">tab 2</tab-panel>
+  <tab-panel title="tab 3">tab 3</tab-panel>
+  <tab-panel title="tab 4">tab 4</tab-panel>
+  <tab-panel title="tab 5">tab 5</tab-panel>
+</tab-group>
+
+<tab-bs-group [(activeIndex)]="currentIndex">
+  <tab-panel title="tab 1">tab 1</tab-panel>
+  <tab-panel title="tab 2">tab 2</tab-panel>
+  <tab-panel title="tab 3">tab 3</tab-panel>
+  <tab-panel title="tab 4">tab 4</tab-panel>
+  <tab-panel title="tab 5">tab 5</tab-panel>
+</tab-bs-group>
