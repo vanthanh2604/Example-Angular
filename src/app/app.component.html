@@ -1,42 +1,32 @@
-<div class="card mx-4">
-  <div class="card-header">
-    You have selected
-    <ng-container [ngTemplateOutlet]="counterTmpl"></ng-container>
-  </div>
-  <div class="card-body">
-    There are
-    <ng-container [ngTemplateOutlet]="counterTmpl"></ng-container> items was
-    selected.
-  </div>
-  <div class="card-footer">
-    You have selected
-    <ng-container [ngTemplateOutlet]="counterTmpl"></ng-container> items.
-  </div>
-</div>
-<ng-template #counterTmpl>
-  <span class="badge badge-primary">{{ counter }}</span> items.
-</ng-template>
-
-<!-- cách 1 -->
-<!-- <ng-template #linkTemplate let-l="link"> {{ l }} </ng-template> -->
-
-<!-- cách  -->
-<ng-template #linkTemplate let-l> {{ l }} </ng-template>
-
-<tab [navs]="navs" [linkTemplate]="linkTemplate"></tab>
-
-<tab-group [(activeIndex)]="currentIndex">
-  <tab-panel title="tab 1">tab 1</tab-panel>
-  <tab-panel title="tab 2">tab 2</tab-panel>
-  <tab-panel title="tab 3">tab 3</tab-panel>
-  <tab-panel title="tab 4">tab 4</tab-panel>
-  <tab-panel title="tab 5">tab 5</tab-panel>
-</tab-group>
-
 <tab-bs-group [(activeIndex)]="currentIndex">
-  <tab-panel title="tab 1">tab 1</tab-panel>
-  <tab-panel title="tab 2">tab 2</tab-panel>
-  <tab-panel title="tab 3">tab 3</tab-panel>
-  <tab-panel title="tab 4">tab 4</tab-panel>
-  <tab-panel title="tab 5">tab 5</tab-panel>
+  <tab-panel title="tab 1">
+    <ng-template tabContent>
+      tab 1
+      <counter></counter>
+    </ng-template>
+  </tab-panel>
+  <tab-panel title="tab 2">
+    <ng-template tabContent>
+      tab 2
+      <counter></counter>
+    </ng-template>
+  </tab-panel>
+  <tab-panel title="tab 3">
+    <ng-template tabContent>
+      tab 3
+      <counter></counter>
+    </ng-template>
+  </tab-panel>
+  <tab-panel title="tab 4">
+    <ng-template tabContent>
+      tab 4
+      <counter></counter>
+    </ng-template>
+  </tab-panel>
+  <tab-panel title="tab 5">
+    <ng-template tabContent>
+      tab 5
+      <app-head></app-head>
+    </ng-template>
+  </tab-panel>
 </tab-bs-group>
